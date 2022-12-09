@@ -6,7 +6,7 @@ const {
     verifyTokenAndAdmin,
 } = require('./verifyToken');
 
-// update user
+// Update user
 router.put('/:id', verifyTokenAndAuthorization, async (req, res) => {
     if (req.body.password) {
         req.body.password = CryptoJS.AES.encrypt(
